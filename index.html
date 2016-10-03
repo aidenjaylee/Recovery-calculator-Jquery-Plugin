@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Dont' touch this line below! -->
+    <div class="container">
+		<div class="row">
+			<div class="section-header col-xs-12 centered">
+			<h2>How Much are Abandoned Carts Costing<br> your eCommerce site?</h2>
+			<p>Use our ROI calculator to see.</p>
+			</div><!-- /.section-header -->        
+		</div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default" style="text-align:center">
+                    <div class="panel-heading" style="text-align:center">
+                        <h2 class="panel-title active">Monthly Checkout Visits</h2>
+                    </div>
+                    <div class="panel-footer">
+                        <form>
+                            <!-- id="roittable" start -->
+                            <div class="row" id="roittable">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-4">
+                                    <center>
+                                        <label>Monthly Checkout Visits</label>
+                                        <div class="input-group"><span id="sizing-addon1" class="input-group-addon">Monthly visits</span>
+                                            <input type="text" id="monthlyvisit" aria-describedby="sizing-addon1" onClick="this.select();" class="form-control" style="text-align:left" value="3000">
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="col-lg-3">
+                                    <center>
+                                        <label>Average Order Value</label>
+                                        <div class="input-group"><span id="sizing-addon2" class="input-group-addon">$</span>
+                                            <input type="text" id="averageorderval" aria-describedby="sizing-addon2" onClick="this.select();" class="form-control" style="text-align:left" value="200">
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="col-lg-3">
+                                    <center>
+                                        <label>Abandonment Rate</label>
+                                        <div class="input-group">
+                                            <input type="text" id="abanonmentrate" onClick="this.select();" aria-describedby="sizing-addon3" class="form-control" style="text-align:right" value="50"><span id="sizing-addon3" class="input-group-addon">%</span></div>
+                                    </center>
+                                </div>
+                                <div class="col-lg-1"></div>
+                            </div>
+                        </form>
+                        <!-- id="roittable" end -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="text-align:center" class="container">
+                        <div class="calculator-pointer">
+                            <img width="200px" height="auto" pagespeed_url_hash="560306443" src="http://www.cartreviver.com/wp-content/uploads/2014/09/arrow2.png"></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div style="text-align:center" class="panel-heading">
+                        <h2 class="panel-title active">How much could you recover?</h2>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center">Recovery Rate</th>
+                                <th style="text-align:center">Recovered Monthly</th>
+                                <th style="text-align:center">Recovered Annually</th>
+                                <th style="text-align:center" class="flex-direction-nav"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="calc">
+                                <td style="text-align:center">5%</td>
+                                <td style="text-align:center">$15,750.00</td>
+                                <td style="text-align:center">$180,000.00</td>
+                                <td class="flex-direction-nav"></td>
+                            </tr>
+                            <tr class="calc active">
+                                <td style="text-align:center; vertical-align:middle">10%</td>
+                                <td style="text-align:center; vertical-align:middle">$30,000.00</td>
+                                <td style="text-align:center; vertical-align:middle">$360,000.00</td>
+                                <td style="text-align:center; vertical-align:middle" class="flex-direction-nav">
+                                    <img src="http://www.cartreviver.com/wp-content/uploads/2014/09/tick-txt.png"></td>
+                            </tr>
+                            <tr class="calc active">
+                                <td style="text-align:center; vertical-align:middle">15%</td>
+                                <td style="text-align:center; vertical-align:middle">$45,000.00</td>
+                                <td style="text-align:center; vertical-align:middle">$540,000.00</td>
+                                <td style="text-align:center; vertical-align:middle" class="flex-direction-nav">
+                                    <img src="http://www.cartreviver.com/wp-content/uploads/2014/09/tick-txt.png"></td>
+                            </tr>
+                            <tr class="calc">
+                                <td style="text-align:center; vertical-align:middle">20%</td>
+                                <td style="text-align:center; vertical-align:middle">$60,000.00</td>
+                                <td style="text-align:center; vertical-align:middle">$720,000.00</td>
+                                <td style="text-align:center; vertical-align:middle" class="flex-direction-nav"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="container">
+                    <center><a class="btn btn-cta" target="_self" href="http://www.cartreviver.com">Want to get this benefit!</a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Container -->
+    <!-- Dont' touch this line above! -->
+    <script src="cart-reviver-roi-calc.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+        $("#roittable").cartReviverRoi({
+            monthlyVisitInput: '#monthlyvisit',
+            averageOrderInput: '#averageorderval',
+            abandonmentRateInput: '#abanonmentrate'
+        });
+
+    });
+    </script>
+</body>
+
+</html>
